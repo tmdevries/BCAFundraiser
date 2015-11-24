@@ -1,0 +1,64 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Event Date</th>
+      <th>Amounted Raised</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @auctions.order('event_date').reverse.each do |auction| %>
+      <tr class="<%= auction.active ? 'success' : '' %>">
+        <td><%= auction.event_date.to_formatted_s(:long) %></td>
+        <td><%= number_to_currency(auction.amount_raised, :unit => "$") %></td>
+        <td><div class="btn-group">
+          <button class="btn btn-default btn-sm" title='Show Items' data-toggle="collapse" data-target=".items-list-<%= auction.id %>" >
+            <span class="glyphicon glyphicon-list"></span>
+          </button>
+          <%= link_to auction_path(auction), class: "btn btn-default btn-sm", title: 'Show details' do %>
+            <span class="glyphicon glyphicon-search"></span>
+          <% end %>
+          <%= link_to edit_auction_path(auction), class: "btn btn-default btn-sm", title: 'Edit details' do %>
+            <span class="glyphicon glyphicon-edit"></span>
+          <% end %>
+          <%= link_to auction, method: :delete, data: { confirm: 'Are you sure you want to delete this auction?' }, class: "btn btn-default btn-sm", title: 'Delete auction' do %>
+            <span class="glyphicon glyphicon-remove-sign"></span>
+          <% end %>
+        </div></td>
+      </tr>
+      <% if auction.items.present? %>
+        <tr class="info collapse items_list items-list-<%= auction.id %>">
+          <th>Item</th>
+          <th><% if auction.active %>Current Bid<% else %>Winning Bid Amount<% end %></th>
+          <th>Actions</th>
+        </tr>
+        <% auction.items.each do |item| %>
+          <tr class="info collapse items-list-<%= auction.id %>">
+            <td><%= item.item_title %></td>
+            <td><% if !top_bid(item).nil? %><%= number_to_currency(top_bid(item).bid_amount, :unit => "$") %>
+                <% else %> <%= number_to_currency(0, :unit => "$") %><% end %></td>
+            <td><div class="btn-group">
+              <%= link_to item_path(item), class: "btn btn-default btn-sm", title: 'Show details' do %>
+                <span class="glyphicon glyphicon-search"></span>
+              <% end %>
+              <%= link_to edit_item_path(item), class: "btn btn-default btn-sm", title: 'Edit details' do %>
+                <span class="glyphicon glyphicon-edit"></span>
+              <% end %>
+              <%= link_to item, method: :delete, data: { confirm: 'Are you sure you want to delete this item?' }, class: "btn btn-default btn-sm", title: 'Delete item' do %>
+                <span class="glyphicon glyphicon-remove-sign"></span>
+              <% end %>
+            </div></td>
+          </tr>
+        <% end %>
+      <% else %>
+        <tr class="info collapse items_list items-list-<%= auction.id %>">
+          <td colspan="3">This auction has no items.</td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

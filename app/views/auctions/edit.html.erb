@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+	<h1>Editing Auction</h1>
+
+	<%= simple_form_for(@auction) do |f| %>
+	  <% if @auction.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this auction from being saved:</h2>
+
+          <ul>
+          <% @auction.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+	  <div class="form-group">
+	    <%= f.input :event_date, :as => :date_picker %>
+	  </div>
+	  <div class="form-group">
+	    <%= f.input :start_date, :as => :datetime_picker,
+	                input_html: {data: {date_options: {sideBySide: true}}} %>
+	  </div>
+	  <div class="form-group">
+	    <%= f.input :end_date, :as => :datetime_picker,
+	                input_html: {data: {date_options: {sideBySide: true}}} %>
+	  </div>
+	  <div class="form-group">
+	    <%= f.label :amount_raised %>
+	    <%= f.text_field :amount_raised, class: 'form-control', value: number_to_currency(@auction.amount_raised, unit: '$') %>
+	  </div>
+	  <div class="form-group">
+		<%= f.label :active, class: 'checkbox inline' do %>
+		    <%= f.check_box :active %>
+		    <span>Make active auction</span>
+		<% end %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit "Update", class: "btn btn-primary" %>
+	  </div>
+	<% end %>
+
+	<%= link_to 'Show', @auction %> |
+	<%= link_to 'Back', admin_path %>
+
+  </div>
+</div>

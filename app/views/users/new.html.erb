@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <% if !admin? %>
+      <% provide(:title, 'Sign up') %>
+      <h1>Sign Up</h1>
+    <% else %>
+      <h1>Create User</h1>
+    <% end %>
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+      <% if admin? %>
+        <%= f.label :admin, class: 'checkbox inline' do %>
+          <%= f.check_box :admin %>
+          <span>Make admin</span>
+        <% end %>
+      <% end %>
+      <div class="actions">
+        <% if admin? %>
+          <%= f.submit "Create new user", class: "btn btn-primary" %>
+        <% else %>
+          <%= f.submit "Create my account", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <% if admin? %><%= link_to 'Back', users_path %><% else %><%= link_to 'Back', root_url %><% end %>
+    <% end %>
+  </div>
+</div>

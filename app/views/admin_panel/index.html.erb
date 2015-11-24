@@ -1,0 +1,22 @@
+<div class="btn-group btn-group-md" role="group">
+  <%= link_to new_auction_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-plus"></span> New Auction 
+  <% end %>
+
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="glyphicon glyphicon-plus"></span> New Item <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <% @auctions.where(active: true).each do |auction| %>
+          <li><%= link_to auction.event_date.to_formatted_s(:long), new_auction_item_path(auction) %>
+        <% end %>
+      </ul>
+  </div>
+  <%= link_to users_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-user"></span> Users List 
+  <% end %>
+</div>
+
+<div style="margin-top: 10px;">
+  <%= render 'auctions/listing' %>
+</div>

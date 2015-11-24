@@ -1,0 +1,43 @@
+<% if @auction.active %>
+	<div class="alert alert-success">
+		<strong>Active!</strong> This auction is currently active and items can be bid upon.
+	</div>
+<% else %>
+	<div class="alert alert-danger">
+		<strong>Inactive!</strong> This auction is inactive. Click update to make it active. Be sure to update the start and end dates and times.
+	</div>
+<% end %>
+<div class="row">
+  	<div class="col-sm-6 col-sm-offset-3">		
+		<h1>Auction Details</h1>
+		<p>
+			<strong>Date of Auction</strong>
+			<%= @auction.event_date.to_formatted_s(:long) %>
+		</p>
+		<p>
+			<strong>Start Date and Time:</strong>
+			<% if @auction.start_date.nil? %>
+				None given. Update to set!
+			<% else %> 
+				<%= @auction.start_date.strftime("%A, %B %d, %Y %l:%M %p") %>
+			<% end %>
+		</p>
+		<p>
+			<strong>End Date and Time:</strong>
+			<% if @auction.end_date.nil? %>
+				None given. Update to set!
+			<% else %>
+				<%= @auction.end_date.strftime("%A, %B %d, %Y %l:%M %p") %>
+			<% end %>
+		</p>
+		<p>
+			<strong>Amount Raised:</strong>
+			<%= number_to_currency(@auction.amount_raised, :unit => "$") %>
+		</p>
+
+		<div class="btn-group btn-group-justified">
+			<%= link_to 'Update', edit_auction_path(@auction), class: 'btn btn-primary' %> 
+			<%= link_to 'Back', admin_path, class: 'btn btn-primary' %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,84 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">		
+	<h1>Item Details</h1>
+	<p>
+	  <% if !@item.image_file_name.nil? %>
+	  	<%= image_tag @item.image.url, style: "float: right; margin: 0 10px;", class: "img-responsive" %>
+	  <% end %>
+	  <h4><%= @item.item_title %></h4>
+	  <% if @item.donor_visible %>
+	    <p>
+	  	  <strong>Donor: </strong> <%= @item.donor_name %>
+	  	</p>
+	  <% end %>
+	  <p>
+	    <strong>Value: </strong> <%= number_to_currency(@item.item_value, :unit => "$") %>
+	  </p>
+	  <p>
+	    <% if @item.bids.present? %>
+	      <strong>Highest Bid: </strong> <%= number_to_currency(top_bid(@item).bid_amount, :unit => "$") %>
+	    <% else %>
+	      <strong>Starting Bid: </strong> <%= number_to_currency(@item.starting_bid, :unit => "$") %>
+	    <% end %>
+	  </p>
+	  <p>
+	    <strong>Minimum Increase: </strong> <%= number_to_currency(@item.min_increase, :unit => "$") %>
+	  </p>
+	  <p>
+	    <% if !@item.item_description.nil? && !@item.item_description.empty? %><strong>Description: </strong> <%= @item.item_description %><% end %>
+	  </p>
+	</p>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+  	<div class="btn-group btn-group-md btn-group-justified">
+  	  <% if logged_in? && (!top_bid(@item).nil? && top_bid(@item).user_id!=current_user.id) || (logged_in? && top_bid(@item).nil?) %>
+	  	<%= link_to new_item_bid_path(@item), class: 'btn btn-success' do %>
+	  	  <span class="glyphicon glyphicon-usd"></span> Place Bid
+	  	<% end %>
+	  <% end %>
+  	  <% if admin? %>
+  	  	<%= link_to 'Edit Item', edit_item_path, class: "btn btn-primary", title: 'Edit details' %>
+  	  	<%= link_to 'Back', admin_path, class: "btn btn-primary" %>
+  	  <% else %>
+  	    <%= link_to 'Back', auction_items_path(@item.auction_id), class: "btn btn-primary" %>
+  	  <% end %>
+  	</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+	<h3>Bid History</h3>
+	<% if @bids.count > 0 %>
+	  <table class="table table-striped">
+	  	<thead>
+	  	  <tr>
+		  	<th>Name</th>
+		  	<th>Amount</th>
+		  </tr>
+	  	</thead>
+	  	<tbody>
+	  	  <% @bids.order('bid_amount').reverse.each do |bid| %>
+	  	  	<tr class="<%= bid==top_bid(@item) ? 'success' : '' %>">
+	  	  	  <td>
+	  	  	  	<% if User.find(bid.user_id) == current_user %>
+	  	  	  		You
+	  	  	  	<% else %>
+	  	  	  		<% if User.find(bid.user_id).name_visible || admin? %>
+	  	  	  			<%= User.find(bid.user_id).first_name %>
+	  	  	  		<% else %>Anonymous<% end %></td>
+	  	  	  	<% end %>
+	  	  	  <td><%= number_to_currency(bid.bid_amount, :unit => '$') %></td>
+	  	  	</tr>
+	  	  <% end %>
+	  	</tbody>
+	  </table>
+	<% else %>
+	<p>No bids have been placed. Be the first!</p>
+	<% end %>
+  </div>
+</div>
+
+

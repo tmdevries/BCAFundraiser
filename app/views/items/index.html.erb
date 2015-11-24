@@ -1,0 +1,42 @@
+<h1>Listing Items</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+      <th>Highest Bid</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.order('id').each do |item| %>
+      <tr>
+        <td><%= item.item_title %></td>
+        <td><%= number_to_currency(item.item_value, :unit => "$") %></td>
+        <td><% if item.bids.present? %>
+              <%= number_to_currency(top_bid(item).bid_amount, :unit => "$") %>
+            <% else %>
+              None
+            <% end %></td>
+        <td>
+          <div class="btn-group">
+            <% if logged_in? %><%= link_to new_item_bid_path(item), class: 'btn btn-success btn-sm' do %><span class="glyphicon glyphicon-usd"></span> Place Bid<% end %><% end %>
+            <%= link_to item_path(item), class: "btn btn-default btn-sm", title: 'View item' do %>
+              <span class="glyphicon glyphicon-search"></span> View Item
+            <% end %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if admin? %>
+  <%= link_to 'Back', admin_path %>
+<% else %>
+  <%= link_to 'Home', root_url %>
+<% end %>

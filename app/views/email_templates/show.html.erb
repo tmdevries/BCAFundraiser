@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alias:</strong>
+  <%= @email_template.alias %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @email_template.message %>
+</p>
+
+<%= link_to 'Edit', edit_email_template_path(@email_template) %> |
+<%= link_to 'Back', email_templates_path %>

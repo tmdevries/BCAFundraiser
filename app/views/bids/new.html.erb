@@ -1,0 +1,56 @@
+<% if !top_bid(@bid.item).nil? && top_bid(@bid.item).user_id==current_user.id %>
+  <div class="alert alert-success">
+  	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  	<strong>Awesome!</strong> You are already the highest bidder!
+  </div>
+<% end %>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">  
+	<h1>New Bid</h1>
+
+	<%= form_for([@bid.item, @bid]) do |f| %>
+	  
+	  <% if @bid.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@bid.errors.count, "error") %> prohibited this bid from being saved:</h2>
+
+	      <ul>
+	      <% @bid.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <p>
+	    <strong><%= @bid.item.item_title %></strong>
+	  </p>
+	  <% if @bid.item.bids.count > 0 %>
+	    <p>
+	      <strong>Highest Bid: <%= number_to_currency(top_bid(@bid.item).bid_amount, :unit => '$') %></strong>
+	    </p>
+	    <p>
+	      <strong>Minimum Increase: <%= number_to_currency(@bid.item.min_increase, :unit => '$') %></strong>
+	    </p>
+	  <% else %>
+	    <p>
+	      <strong>Starting Bid: <%= number_to_currency(@bid.item.starting_bid, :unit => '$') %></strong>
+	    </p>
+	  <% end %>
+	  <div class="form-group">
+	    <%= f.label :bid_amount %>
+	    <%= f.text_field :bid_amount, value: '$', class: 'form-control' %>
+	  </div>
+ 	  <% if (!top_bid(@bid.item).nil? && top_bid(@bid.item).user_id!=current_user.id) || top_bid(@bid.item).nil? %>
+	    <div class="actions">
+      	  <%= f.submit "Place Bid", class: "btn btn-success btn-block" %>
+        </div>
+      <% end %>
+	<% end %>
+	<% if !top_bid(@bid.item).nil? && top_bid(@bid.item).user_id==current_user.id %>
+	  <button class="btn btn-success btn-block disabled">Place Bid</button>
+	<% end %>
+
+	<%= link_to 'Back', item_path(@bid.item) %>
+  </div>
+</div>
+

@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>Edit User Preferences</h1>
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :name_visible, class: 'checkbox inline' do %>
+          <%= f.check_box :name_visible %>
+          <span>Allow other users to see my name.</span>
+        <% end %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :notify_by_email, class: 'checkbox inline' do %>
+          <%= f.check_box :notify_by_email %>
+          <span>Notify me by email when I'm outbid or win.</span>
+        <% end %>
+      </div>
+      <!--<div class="form-group">
+  	    <%= f.label :phone_number %>
+  	    <%= f.text_field :phone_number, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :notify_by_text, class: 'checkbox inline' do %>
+          <%= f.check_box :notify_by_text %>
+          <span>Notify me by text when I'm outbid or win.</span>
+        <% end %>
+      </div> -->
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+      <%= f.submit "Update account", class: "btn btn-primary" %>
+    <% end %>
+    <%= link_to 'Show', @user %> |
+    <% if admin? %><%= link_to 'Back', users_path %><% else %><%= link_to 'Back', root_url %><% end %>
+  </div>
+</div>
+
+

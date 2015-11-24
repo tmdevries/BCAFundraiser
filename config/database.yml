@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: bcafundraiser_dev
+  username: taradevries
+
+test:
+  adapter: postgresql
+  host: localhost
+  database: bcafundraiser_test
+  username: taradevries
+
+production:
+  adapter: postgresql
+  host: localhost
+  database: bcafundraiser_prod
+  username: taradevries

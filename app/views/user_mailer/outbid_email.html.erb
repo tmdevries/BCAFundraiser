@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.first_name %>,</h1>
+    <p>
+      <strong>You've been outbid on <%= @item.item_title %>!</strong> <%= link_to 'Log in', @url %> to
+      place a new bid or bid on other items we have to offer.<br>
+    </p>
+    <p>Thanks and good luck!</p>
+    <p>
+      Best,
+    </p>
+    <h3>The De Vriesss</h3>
+  </body>
+</html>

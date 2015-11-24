@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+  	<h1>Send an email to bidders</h1>
+
+  	<% form_tag(send_email_path) %>
+  	  <%= label_tag 'template', 'Choose template' %>
+  	  <%= f.collection_select 'template', EmailTemplate.all, :id, :alias, {inclue_blank: true} %>
+  	  <%= f.text_area :message %>
+  	<% end %>

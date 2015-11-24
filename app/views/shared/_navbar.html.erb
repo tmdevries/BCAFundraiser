@@ -1,0 +1,40 @@
+<nav class="navbar navbar-theme">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <%= link_to 'And We\'re Walking! Fundraising', root_url, class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <% if admin? %>
+          <li><%= link_to 'Admin', admin_path %></li>
+        <% end %>
+        <li class="dropdown">
+          <a href='#' class="dropdown-toggle" data-toggle="dropdown" > Browse <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <% if Auction.where(active: true).count > 0 %>
+              <% Auction.all.each do |auction| %>
+                <li><%= link_to auction.event_date.to_formatted_s(:long) + ' Auction', auction_items_path(auction) %></li>
+              <% end %>
+            <% else %>
+              There are currently no active auctions!<br>
+              Thank you for your support!
+            <% end %>
+          </ul>
+        </li>
+        <% if logged_in? %>
+          <li><%= link_to 'Manage Bids', manage_path %>
+        	<li><%= link_to 'Account', user_path(@current_user) %></li>
+        	<li><%= link_to 'Logout', logout_path, method: :delete %></li>
+        <% else %>
+	        <li><%= link_to 'Login', login_path %></li>
+	        <li><%= link_to 'Sign Up', signup_path %></li>
+	    <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

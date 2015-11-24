@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>Account</h1>
+    <p>
+      <strong><%= @user.first_name %> <%= @user.last_name %></strong>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+
+    <!--<p>
+      <strong>Phone number:</strong>
+      <%= @user.phone_number %>
+    </p>-->
+
+    <p>
+      <strong>Name visible to other users:</strong>
+      <% if @user.name_visible %>Yes <% else %>No <% end %>
+    </p>
+
+    <p>
+      <strong>Notify by email:</strong>
+      <% if @user.notify_by_email %>Yes <% else %>No <% end %>
+    </p>
+
+<!--p>
+      <strong>Notify by text:</strong>
+      <% if @user.notify_by_text %>Yes <% else %>No <% end %>
+    </p>-->
+
+    <div class='btn-group btn-group-justified'>
+    <%= link_to 'Update', edit_user_path(@user), class: 'btn btn-primary' %><% if admin? %><%= link_to 'Back', users_path, class: 'btn btn-primary' %><% else %><%= link_to 'Back', root_url, class: 'btn btn-primary' %><% end %>
+  </div>
+</div>

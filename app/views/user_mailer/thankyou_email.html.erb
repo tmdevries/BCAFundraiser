@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.first_name %>,</h1>
+    <p>
+      <%= @message %>
+    </p>
+    <p>
+      <% if @item.nil? %>
+        You didn't win anything this year. But we want to thank you so much for participating and welcome you to try again next year!
+      <% else %>
+        You have won the following items:
+        <li>
+          <% @item.each do item %>
+          <ul><%= item.item_title %></ul>
+          <% end %>
+        </li>
+        To pay, you can donate to one of our 3-Day Participant pages:<br>
+        <%= link_to 'http://the3day.org/goto/Lori-2015' %> or<br>
+        <%= link_to 'http://the3day.org/goto/Tara-2015' %>
+        We'll arrange how to get what you won to you as well.
+      <% end %> 
+    </p>
+    <p>Thanks again!</p>
+    <p>
+      Best,
+    </p>
+    <h3>The De Vriesss</h3>
+  </body>
+</html>
