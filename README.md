@@ -23,4 +23,4 @@ Some things to keep in mind if you deploy the app for yourself:
 1. Please link to my github in order to give me credit for my work. 
 2. You must manually add a first user that is an admin through the Rails console or update a user to be an admin. Once at least one user is an admin, that user can make other users admins.
 3. The database used is PostgreSQL so it is compatible with Heroku. 
-4. The Paperclip gem uses Amazon SW3 to store image files. You must alter this to use the database or enter your own credentials for a file server. Check the environment files to see what to name the variables or to change their names.
+4. The Paperclip gem uses Amazon S3 to store image files. You must alter this to use the database or enter your own credentials for a file server. Check the environment files to see what to name the variables or to change their names.
