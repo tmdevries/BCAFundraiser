@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025024254) do
+ActiveRecord::Schema.define(version: 20151021155117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,11 +32,6 @@ ActiveRecord::Schema.define(version: 20151025024254) do
 
   add_index "bids", ["item_id"], name: "index_bids_on_item_id", using: :btree
   add_index "bids", ["user_id"], name: "index_bids_on_user_id", using: :btree
-
-  create_table "email_templates", force: :cascade do |t|
-    t.string "alias"
-    t.string "message"
-  end
 
   create_table "items", force: :cascade do |t|
     t.string   "item_title"
