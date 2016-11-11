@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   get    'admin', to: 'admin_panel#index'
   get    'manage', to: 'bids#index'
-  get    'email_bidders', to: 'admin_panel#email_bidders'
-  post   'send_email', to: 'admin_panel#send_email'
+  #get    'email_bidders', to: 'admin_panel#email_bidders'
+  #post   'send_email', to: 'admin_panel#send_email'
 
 
   resources :users 
