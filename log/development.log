@@ -49468,3 +49468,2020 @@ Processing by AdminPanelController#index as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", true]]
   Rendered shared/_navbar.html.erb (3.3ms)
 Completed 200 OK in 273ms (Views: 266.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2017-10-23 22:05:05 -0700
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `initialize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `new'
+  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:655:in `connect'
+  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.4) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.0ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (92.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (209.2ms)
+
+
+Started GET "/" for ::1 at 2017-10-23 22:14:44 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (3.4ms)
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (40.8ms)
+Completed 200 OK in 779ms (Views: 737.9ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/assets/application.self-a0f2a637a73e3ee9eba6a04080f05a3f073d68d3b2f0db971f5408257ea5f9cd.css?body=1" for ::1 at 2017-10-23 22:14:45 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 22:14:46 -0700
+
+
+Started GET "/" for ::1 at 2017-10-23 22:26:25 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (9.5ms)
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (4.5ms)
+Completed 200 OK in 2892ms (Views: 2871.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/application.self-993c083c59221f17bc78c938eaa091b14eaf13151867a18b2622ceb9335cac2c.css?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:28 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:29 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:29 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:29 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:26:29 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 22:26:29 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 22:26:29 -0700
+
+
+Started GET "/" for ::1 at 2017-10-23 22:26:46 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 320ms (Views: 317.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-10-23 22:30:15 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (10.6ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.9ms)
+Completed 200 OK in 2980ms (Views: 2972.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/application.self-85658f23e046b970dda5085d7b8dbdac9e6d932def9dbdcea0fd8c1cbbe06c46.css?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:18 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 22:30:19 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:19 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:19 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:30:19 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 22:30:19 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 22:30:19 -0700
+
+
+Started GET "/" for ::1 at 2017-10-23 22:31:02 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (4.4ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (22.8ms)
+Completed 200 OK in 507ms (Views: 495.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-85658f23e046b970dda5085d7b8dbdac9e6d932def9dbdcea0fd8c1cbbe06c46.css?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 22:31:03 -0700
+
+
+Started GET "/" for ::1 at 2017-10-23 22:32:24 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.4ms)
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.9ms)
+Completed 200 OK in 2722ms (Views: 2719.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.self-c8b9587ca94a714e707511d033c9831dbe33907d5d4930bd3e49e304b31cb2e8.css?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 22:32:27 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 22:32:28 -0700
+
+
+Started GET "/" for ::1 at 2017-10-23 22:33:39 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.4ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 2762ms (Views: 2759.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-6010b0843224e1e6bd2e55fd54281bf555c262dc42f70731a128db0460c822a7.css?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 22:33:42 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 22:33:43 -0700
+
+
+Started GET "/" for ::1 at 2017-10-23 22:34:21 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.4ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 2821ms (Views: 2818.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-09e663754e7e7c8f23e7d2719469b1064c2984b26aca38ee29d81fb103d2e59b.css?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:24 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 22:34:25 -0700
+
+
+Started GET "/" for ::1 at 2017-10-23 22:34:38 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.4ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (2.7ms)
+Completed 200 OK in 256ms (Views: 254.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-10-23 22:59:30 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (7.9ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.7ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (22.4ms)
+Completed 200 OK in 562ms (Views: 549.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-10-23 23:02:17 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (5.9ms)
+Completed 200 OK in 3556ms (Views: 3545.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/application.self-b5a3b4bad00a190d3b209900f17d94c85cc27416d4d7b082d9b027446311f83a.css?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/moment.self-9e3cbea792908410da80685bcee3695e54b449d063e5dadb3b6c05e038b46444.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-6ead78beb12f0003df8dd07cb3ab3543d2573653caf0ee0d4fda4da49532f128.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/pickers.self-14e4603dfad235a886231a39de786bcf942ff4faae5f61feedc07da16c18af58.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/admin_panel.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/autobids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/auctions.self-4798bc66099a8facb8cd5ea7689d5a7a9aa1a77bc014e90d540b309a805760df.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/email_templates.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:02:21 -0700
+
+
+Started GET "/assets/bg-pink-ribbons-c8f048978fdbec47e404043a9d6957306083d08d70137a8af3e91de7463bef89.png" for ::1 at 2017-10-23 23:02:22 -0700
+
+
+Started GET "/auctions/2/items" for ::1 at 2017-10-23 23:02:31 -0700
+Processing by ItemsController#index as HTML
+  Parameters: {"auction_id"=>"2"}
+  [1m[35mAuction Load (3.4ms)[0m  SELECT  "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mItem Load (2.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."auction_id" = $1  ORDER BY id[0m  [["auction_id", 2]]
+  Rendered items/index.html.erb within layouts/application (7.4ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (4.6ms)
+Completed 200 OK in 341ms (Views: 254.1ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/login" for ::1 at 2017-10-23 23:02:35 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (34.0ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.1ms)
+Completed 200 OK in 305ms (Views: 303.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2017-10-23 23:13:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/sessions/new.html.erb:12: syntax error, unexpected ')'
+/Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/sessions/new.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/sessions/new.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/sessions/new.html.erb:30: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/sessions/new.html.erb:12: syntax error, unexpected ')'
+  app/views/sessions/new.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+  app/views/sessions/new.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/sessions/new.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (92.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.4ms)
+
+
+Started GET "/login" for ::1 at 2017-10-23 23:13:57 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (26.1ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.6ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (62.7ms)
+Completed 200 OK in 1052ms (Views: 1040.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-23 23:13:58 -0700
+
+
+Started GET "/password_resets/new" for ::1 at 2017-10-23 23:14:03 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendered password_resets/new.html.erb within layouts/application (0.7ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (6.5ms)
+Completed 200 OK in 248ms (Views: 245.7ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddResetToUsers (20171024061915)
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36m (11.8ms)[0m  [1mALTER TABLE "users" ADD "reset_digest" character varying[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "reset_sent_at" timestamp
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20171024061915"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'auctions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (5.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bids'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/password_resets/new" for ::1 at 2017-10-23 23:23:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PasswordResetsController#new as HTML
+  Rendered password_resets/new.html.erb within layouts/application (23.4ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (38.5ms)
+Completed 200 OK in 814ms (Views: 795.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2017-10-23 23:32:29 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendered password_resets/new.html.erb within layouts/application (8.0ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (20.2ms)
+Completed 200 OK in 616ms (Views: 604.0ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/password_resets" for ::1 at 2017-10-23 23:32:35 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lGpY4PqBHRuQDx+JHqScbXoBP7n176zEB3BrHNsfXAsFSQAPamwxmSk4whyGojKOlAWNeqd27BhWAQkSrGg1iw==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "foo@bar.com"]]
+  Rendered password_resets/new.html.erb within layouts/application (0.9ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.5ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.4ms)
+Completed 200 OK in 329ms (Views: 313.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/rails/mailers/user_mailer/outbid" for ::1 at 2017-10-23 23:43:22 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/outbid"}
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (1.4ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  Rendered user_mailer/outbid_email.html.erb within layouts/mailer (1.5ms)
+  Rendered user_mailer/outbid_email.text.erb within layouts/mailer (0.6ms)
+
+UserMailer#outbid_email: processed outbound mail in 308.2ms
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/mailers/email.html.erb (11.9ms)
+Completed 200 OK in 546ms (Views: 19.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/rails/mailers/user_mailer/outbid?part=text%2Fhtml" for ::1 at 2017-10-23 23:43:23 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"user_mailer/outbid"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.9ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  Rendered user_mailer/outbid_email.html.erb within layouts/mailer (0.3ms)
+  Rendered user_mailer/outbid_email.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#outbid_email: processed outbound mail in 53.3ms
+  Rendered text template (0.0ms)
+Completed 200 OK in 70ms (Views: 4.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/mailers/user_mailer/passowrd_reset" for ::1 at 2017-10-23 23:43:57 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/passowrd_reset"}
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
+
+AbstractController::ActionNotFound (Email 'passowrd_reset' not found in UserMailerPreview):
+  railties (4.2.4) lib/rails/mailers_controller.rb:38:in `preview'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (212.6ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset" for ::1 at 2017-10-23 23:44:02 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (6.3ms)
+
+UserMailer#password_reset: processed outbound mail in 34.4ms
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.7ms)
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>To reset your password click the link below:</p>
+    4: 
+    5: <%= link_to "Reset password", edit_password_reset_url(@user.reset_token,
+    6:                                                       email: @user.email) %>
+    7: 
+    8: <p>This link will expire in two hours.</p>
+  app/views/user_mailer/password_reset.html.erb:5:in `_app_views_user_mailer_password_reset_html_erb__2161242925833168779_70255507969660'
+  app/mailers/user_mailer.rb:34:in `password_reset'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.0ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (196.4ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset" for ::1 at 2017-10-23 23:46:54 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/password_reset"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (11.4ms)
+
+UserMailer#password_reset: processed outbound mail in 49.7ms
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>To reset your password click the link below:</p>
+    4: 
+    5: <%= link_to "Reset password", edit_password_reset_url(@user.reset_token, email: @user.email) %>
+    6: 
+    7: <p>This link will expire in two hours.</p>
+    8: 
+  app/views/user_mailer/password_reset.html.erb:5:in `_app_views_user_mailer_password_reset_html_erb__2161242925833168779_70255508489880'
+  app/mailers/user_mailer.rb:34:in `password_reset'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (102.0ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.2ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (198.7ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset" for ::1 at 2017-10-23 23:48:30 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_html_erb__2161242925833168779_70255491814060 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.html.erb:5)
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (10.5ms)
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (5.4ms)
+
+UserMailer#password_reset: processed outbound mail in 43.7ms
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    1: To reset your password click the link below:
+    2: 
+    3: <%= edit_password_reset_url(@user.reset_token, email: @user.email) %>
+    4: 
+    5: This link will expire in two hours.
+    6: 
+  app/views/user_mailer/password_reset.text.erb:3:in `_app_views_user_mailer_password_reset_text_erb__23925162434266482_70255491813540'
+  app/mailers/user_mailer.rb:34:in `password_reset'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.9ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (197.8ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset" for ::1 at 2017-10-23 23:48:50 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/password_reset"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_html_erb__2161242925833168779_70255484274660 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.html.erb:5)
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (2.1ms)
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_text_erb__23925162434266482_70255484274240 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.text.erb:3)
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (1.5ms)
+
+UserMailer#password_reset: processed outbound mail in 40.9ms
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/mailers/email.html.erb (14.6ms)
+Completed 200 OK in 73ms (Views: 23.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset?part=text%2Fhtml" for ::1 at 2017-10-23 23:48:51 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_html_erb__2161242925833168779_70255484274660 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.html.erb:5)
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.1ms)
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_text_erb__23925162434266482_70255484274240 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.text.erb:3)
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (1.0ms)
+
+UserMailer#password_reset: processed outbound mail in 48.3ms
+  Rendered text template (0.1ms)
+Completed 200 OK in 63ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/password_resets" for ::1 at 2017-10-23 23:51:31 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOAT9jROkI0KY3INU3sw8RcvOEfbh/PAbyVp9OXJPmC9w0sZpKO8D7NUr5jLfZ4S+SuKhIkesxw+VAv6kr5X4A==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "tmdevries@me.com"]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.8ms)
+
+NoMethodError (undefined method `create_reset_digest' for #<User:0x007fcb448fbaf8>):
+  app/controllers/password_resets_controller.rb:8:in `create'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (92.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (205.9ms)
+
+
+Started POST "/password_resets" for ::1 at 2017-10-23 23:51:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOAT9jROkI0KY3INU3sw8RcvOEfbh/PAbyVp9OXJPmC9w0sZpKO8D7NUr5jLfZ4S+SuKhIkesxw+VAv6kr5X4A==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "tmdevries@me.com"]]
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 6.7ms)
+
+NoMethodError (undefined method `create_reset_digest' for #<User:0x007f8cc3905e00>):
+  app/controllers/password_resets_controller.rb:8:in `create'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.3ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (211.6ms)
+
+
+Started POST "/password_resets" for ::1 at 2017-10-23 23:52:22 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOAT9jROkI0KY3INU3sw8RcvOEfbh/PAbyVp9OXJPmC9w0sZpKO8D7NUr5jLfZ4S+SuKhIkesxw+VAv6kr5X4A==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "tmdevries@me.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "users" SET "reset_digest" = $1 WHERE "users"."id" = $2[0m  [["reset_digest", "$2a$10$RwW56SA9MnTrE1.8u9c2cO2uqSq6eFRwVSb8ephPngogSH4ulfOYm"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "reset_sent_at" = $1 WHERE "users"."id" = $2  [["reset_sent_at", "2017-10-24 06:52:22.441596"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_html_erb__2329686848479927629_70121276139880 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.html.erb:5)
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (2.3ms)
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_text_erb__1599871717107350769_70121281245320 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.text.erb:3)
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (1.6ms)
+
+UserMailer#password_reset: processed outbound mail in 257.5ms
+
+Sent mail to tmdevries@me.com (14.4ms)
+Date: Mon, 23 Oct 2017 23:52:22 -0700
+From: andwerewalking@tmdevries.com
+To: tmdevries@me.com
+Message-ID: <59eee326b1ce2_23df3fc663a69514563d8@Taras-MacBook-Air-2.local.mail>
+Subject: Password reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59eee326af2f3_23df3fc663a6951456277";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59eee326af2f3_23df3fc663a6951456277
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+To reset your password click the link below:
+
+/password_resets/gUstrgDid3QnCl-CpnbcNg/edit?email=tmdevries%40me.com
+
+This link will expire in two hours.
+
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+
+----==_mimepart_59eee326af2f3_23df3fc663a6951456277
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <h1>Password reset</h1>
+
+<p>To reset your password click the link below:</p>
+
+<a href="/password_resets/gUstrgDid3QnCl-CpnbcNg/edit?email=tmdevries%40me.com">Reset password</a>
+
+<p>This link will expire in two hours.</p>
+
+<p>
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+</p>
+  </body>
+</html>
+
+----==_mimepart_59eee326af2f3_23df3fc663a6951456277--
+
+Completed 500 Internal Server Error in 415ms (ActiveRecord: 10.1ms)
+
+Errno::ECONNREFUSED (Connection refused - connect(2) for nil port 25):
+  app/models/user.rb:37:in `send_password_reset_email'
+  app/controllers/password_resets_controller.rb:9:in `create'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (194.8ms)
+
+
+Started GET "/password_resets" for ::1 at 2017-10-23 23:59:58 -0700
+
+ActionController::RoutingError (No route matches [GET] "/password_resets"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.0ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (185.0ms)
+
+
+Started GET "/login" for ::1 at 2017-10-24 00:00:09 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (53.3ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (31.6ms)
+Completed 200 OK in 1017ms (Views: 1009.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/login" for ::1 at 2017-10-24 00:00:10 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (4.5ms)
+Completed 200 OK in 322ms (Views: 318.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2017-10-24 00:00:23 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendered password_resets/new.html.erb within layouts/application (1.7ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.4ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.4ms)
+Completed 200 OK in 267ms (Views: 265.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for ::1 at 2017-10-24 00:00:49 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TAqkWJe54EcLmMYglH9gAKqpXlZ+ABnEs9LC1PMzD5rdKfy3B1TMxbKvG7UMec7jRK3slSyZWRjio6DahERmGg==", "session"=>{"email"=>"tmdevries@me.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "tmdevries@me.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.3ms)
+Completed 200 OK in 407ms (Views: 309.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/login" for ::1 at 2017-10-24 00:01:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Brqg51InHvNiosbPrQh8q/aJ8k8if5Izxczc7moy6niXmfgIwsoycduVG1o1DtJIGI1AjHDm0u+Uvb7gHUWD+A==", "session"=>{"email"=>"tmdevries@me.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "tmdevries@me.com"]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:01:02 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (6.6ms)
+Completed 200 OK in 306ms (Views: 303.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for ::1 at 2017-10-24 00:01:09 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 290ms (Views: 283.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for ::1 at 2017-10-24 00:01:22 -0700
+Processing by AdminPanelController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuction Load (0.5ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (1.9ms)[0m  [1mSELECT "auctions".* FROM "auctions"  ORDER BY event_date[0m
+  [1m[35mItem Load (0.8ms)[0m  SELECT "items".* FROM "items" WHERE "items"."auction_id" = $1  [["auction_id", 2]]
+  [1m[36mItem Load (1.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."auction_id" = $1[0m  [["auction_id", 1]]
+  [1m[35mBid Load (2.6ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount  [["item_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount[0m  [["item_id", 1]]
+  [1m[35mBid Load (0.6ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount  [["item_id", 4]]
+  [1m[36mBid Load (0.5ms)[0m  [1mSELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount[0m  [["item_id", 2]]
+  [1m[35mBid Load (0.6ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount  [["item_id", 3]]
+  Rendered auctions/_listing.html.erb (117.9ms)
+  Rendered admin_panel/index.html.erb within layouts/application (124.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", true]]
+  Rendered shared/_navbar.html.erb (3.2ms)
+Completed 200 OK in 400ms (Views: 382.1ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2017-10-24 00:01:23 -0700
+
+
+Started GET "/auctions/2/edit" for ::1 at 2017-10-24 00:01:28 -0700
+Processing by AuctionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT  "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered auctions/edit.html.erb within layouts/application (84.3ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.3ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.4ms)
+Completed 200 OK in 362ms (Views: 356.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin" for ::1 at 2017-10-24 00:01:30 -0700
+Processing by AdminPanelController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuction Load (0.4ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.6ms)[0m  [1mSELECT "auctions".* FROM "auctions"  ORDER BY event_date[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."auction_id" = $1  [["auction_id", 2]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."auction_id" = $1[0m  [["auction_id", 1]]
+  [1m[35mBid Load (0.5ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount  [["item_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount[0m  [["item_id", 1]]
+  [1m[35mBid Load (0.5ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount  [["item_id", 4]]
+  [1m[36mBid Load (0.3ms)[0m  [1mSELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount[0m  [["item_id", 2]]
+  [1m[35mBid Load (0.4ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."item_id" = $1  ORDER BY bid_amount  [["item_id", 3]]
+  Rendered auctions/_listing.html.erb (18.6ms)
+  Rendered admin_panel/index.html.erb within layouts/application (23.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", true]]
+  Rendered shared/_navbar.html.erb (3.7ms)
+Completed 200 OK in 333ms (Views: 326.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/auctions/2/items/new" for ::1 at 2017-10-24 00:01:35 -0700
+Processing by ItemsController#new as HTML
+  Parameters: {"auction_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered items/new.html.erb within layouts/application (10.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.3ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (4.3ms)
+Completed 200 OK in 343ms (Views: 336.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/auctions/2/items" for ::1 at 2017-10-24 00:02:31 -0700
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aUkgBH7yA5iPNTFpkRAvMQOSFu1z9WtZvmDNcXjBA0X4anjr7h8vGjYC7PwJFoHS7ZakLiFsK4XvEa9/D7ZqxQ==", "item"=>{"item_title"=>"BLah", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8cc99f9e00 @tempfile=#<Tempfile:/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/RackMultipart20171024-9183-19n53j6.jpg>, @original_filename="LInkedIn_Pic.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"item[image]\"; filename=\"LInkedIn_Pic.jpg\"\r\nContent-Type: image/jpeg\r\n">, "item_description"=>"sexy biiiiitch", "item_value"=>"$10000000", "starting_bid"=>"$5", "min_increase"=>"$1000", "donor_name"=>"You know who ;)", "donor_visible"=>"0"}, "commit"=>"Create Item", "auction_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuction Load (0.7ms)[0m  SELECT  "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/7d1bd8cc67abb5d1f04420628347434820171024-9183-vh5qbg'
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/1d0c2e414bdfcbeb7d06b8c214a5c1f620171024-9183-1o9apaq'
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["item_title", "BLah"], ["item_description", "sexy biiiiitch"], ["item_value", "10000000.0"], ["donor_name", "You know who ;)"], ["donor_visible", "f"], ["starting_bid", "5.0"], ["min_bid", "5.0"], ["min_increase", "1000.0"], ["image_file_name", "LInkedIn_Pic.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 53256], ["image_updated_at", "2017-10-24 07:02:31.571940"], ["auction_id", 2]]
+PG::NumericValueOutOfRange: ERROR:  numeric field overflow
+DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+: INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 6.9ms)
+
+ActiveRecord::StatementInvalid (PG::NumericValueOutOfRange: ERROR:  numeric field overflow
+DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+: INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"):
+  app/controllers/items_controller.rb:32:in `create'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.0ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (124.4ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f8cc4608a30 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f8cc46086e8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f8cc4601140 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/auctions/2/items" for ::1 at 2017-10-24 00:02:58 -0700
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGFIBCIG6lPWPiOMzZJbmKWhnZdCw22x/bw0CxaEfkWZQhDrsuvG0W8J/hlVlPV7S6UvVBBaLW2szVYFYfMXxQ==", "item"=>{"item_title"=>"BLah", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8cc59d24d0 @tempfile=#<Tempfile:/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/RackMultipart20171024-9183-1nxt45b.jpg>, @original_filename="LInkedIn_Pic.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"item[image]\"; filename=\"LInkedIn_Pic.jpg\"\r\nContent-Type: image/jpeg\r\n">, "item_description"=>"sexy biiiiitch", "item_value"=>"$100000", "starting_bid"=>"$5", "min_increase"=>"$1000", "donor_name"=>"You know who ;)", "donor_visible"=>"0"}, "commit"=>"Create Item", "auction_id"=>"2"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAuction Load (0.9ms)[0m  [1mSELECT  "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/e1c6ef82cf165d44f4e9d958f11e85ba20171024-9183-93lsn8'
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/82383edc6ae497e019002460eadf109720171024-9183-1ije4n8'
+  [1m[36mSQL (4.7ms)[0m  [1mINSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["item_title", "BLah"], ["item_description", "sexy biiiiitch"], ["item_value", "100000.0"], ["donor_name", "You know who ;)"], ["donor_visible", "f"], ["starting_bid", "5.0"], ["min_bid", "5.0"], ["min_increase", "1000.0"], ["image_file_name", "LInkedIn_Pic.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 53256], ["image_updated_at", "2017-10-24 07:02:58.741197"], ["auction_id", 2]]
+PG::NumericValueOutOfRange: ERROR:  numeric field overflow
+DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+: INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[35m (1.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 7.7ms)
+
+ActiveRecord::StatementInvalid (PG::NumericValueOutOfRange: ERROR:  numeric field overflow
+DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+: INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"):
+  app/controllers/items_controller.rb:32:in `create'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.3ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f8cc4608a30 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f8cc46086e8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f8cc4601140 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/auctions/2/items" for ::1 at 2017-10-24 00:04:20 -0700
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGFIBCIG6lPWPiOMzZJbmKWhnZdCw22x/bw0CxaEfkWZQhDrsuvG0W8J/hlVlPV7S6UvVBBaLW2szVYFYfMXxQ==", "item"=>{"item_title"=>"BLah", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8cca508468 @tempfile=#<Tempfile:/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/RackMultipart20171024-9183-16s9o2s.jpg>, @original_filename="LInkedIn_Pic.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"item[image]\"; filename=\"LInkedIn_Pic.jpg\"\r\nContent-Type: image/jpeg\r\n">, "item_description"=>"sexy biiiiitch", "item_value"=>"$100000", "starting_bid"=>"$5", "min_increase"=>"$100", "donor_name"=>"You know who ;)", "donor_visible"=>"0"}, "commit"=>"Create Item", "auction_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuction Load (0.5ms)[0m  SELECT  "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/fbc4e88cb11e9ce02d1e8045a285829a20171024-9183-4yhnc4'
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/9d8e43a0814c29328cd6c103cf3e9a7520171024-9183-8k63ls'
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["item_title", "BLah"], ["item_description", "sexy biiiiitch"], ["item_value", "100000.0"], ["donor_name", "You know who ;)"], ["donor_visible", "f"], ["starting_bid", "5.0"], ["min_bid", "5.0"], ["min_increase", "100.0"], ["image_file_name", "LInkedIn_Pic.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 53256], ["image_updated_at", "2017-10-24 07:04:20.898543"], ["auction_id", 2]]
+PG::NumericValueOutOfRange: ERROR:  numeric field overflow
+DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+: INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 5.4ms)
+
+ActiveRecord::StatementInvalid (PG::NumericValueOutOfRange: ERROR:  numeric field overflow
+DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+: INSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"):
+  app/controllers/items_controller.rb:32:in `create'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.4ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f8cc4608a30 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f8cc46086e8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f8cc4601140 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/auctions/2/items" for ::1 at 2017-10-24 00:05:19 -0700
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGFIBCIG6lPWPiOMzZJbmKWhnZdCw22x/bw0CxaEfkWZQhDrsuvG0W8J/hlVlPV7S6UvVBBaLW2szVYFYfMXxQ==", "item"=>{"item_title"=>"BLah", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8cca069038 @tempfile=#<Tempfile:/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/RackMultipart20171024-9183-71mhy2.jpg>, @original_filename="LInkedIn_Pic.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"item[image]\"; filename=\"LInkedIn_Pic.jpg\"\r\nContent-Type: image/jpeg\r\n">, "item_description"=>"sexy biiiiitch", "item_value"=>"$900", "starting_bid"=>"$5", "min_increase"=>"$100", "donor_name"=>"You know who ;)", "donor_visible"=>"0"}, "commit"=>"Create Item", "auction_id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAuction Load (0.7ms)[0m  [1mSELECT  "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/819930ac80061321354fe9aa2c661dc020171024-9183-1qhjo6i'
+Command :: file -b --mime-type '/var/folders/bc/71ppfzcn2w96211pp89vrh6c0000gn/T/9a091f6afadc8612d3b54242f30ea8a320171024-9183-qa78xh'
+  [1m[36mSQL (7.9ms)[0m  [1mINSERT INTO "items" ("item_title", "item_description", "item_value", "donor_name", "donor_visible", "starting_bid", "min_bid", "min_increase", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "auction_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["item_title", "BLah"], ["item_description", "sexy biiiiitch"], ["item_value", "900.0"], ["donor_name", "You know who ;)"], ["donor_visible", "f"], ["starting_bid", "5.0"], ["min_bid", "5.0"], ["min_increase", "100.0"], ["image_file_name", "LInkedIn_Pic.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 53256], ["image_updated_at", "2017-10-24 07:05:19.682664"], ["auction_id", 2]]
+[paperclip] saving /items/images/000/000/005/original/LInkedIn_Pic.jpg
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 9.9ms)
+
+ArgumentError (missing required :bucket option):
+  app/controllers/items_controller.rb:32:in `create'
+
+
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.9ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.5ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f8cc4608a30 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f8cc46086e8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f8cc4601140 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/1" for ::1 at 2017-10-24 00:36:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (1.4ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (27.8ms)
+Completed 200 OK in 536ms (Views: 445.9ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:36:19 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.5ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (6.8ms)
+Completed 200 OK in 364ms (Views: 361.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/login" for ::1 at 2017-10-24 00:36:21 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.5ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (7.0ms)
+Completed 200 OK in 309ms (Views: 306.1ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2017-10-24 00:36:26 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SUVtMxiKW7/RdmcTM6M3Pky/MCc6wkupwyMngmzRdhrYZjXciGd3PWhBuoarpZndoruC5GhbC3WSUkWMG6Yfmg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.8ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:36:26 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.2ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.0ms)
+Completed 200 OK in 288ms (Views: 286.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2017-10-24 00:36:29 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.2ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (2.8ms)
+Completed 200 OK in 285ms (Views: 283.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for ::1 at 2017-10-24 00:36:41 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mynABtr+bMdBBKLRnH7Fvfzn7xlOFeaCJ/6dDB3JnlgKCpjpShNARfgzf0QEeGteEuNd2hyMpl52j/8Car732A==", "session"=>{"email"=>"tmdevries@me.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "tmdevries@me.com"]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  UPDATE "users" SET "remember_digest" = $1 WHERE "users"."id" = $2  [["remember_digest", "$2a$10$W9goOeiihHgl23U2YFKSEuYVBCy840r9ysYLWSc5jUEljlX02KIme"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 188ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:36:41 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.3ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (4.7ms)
+Completed 200 OK in 331ms (Views: 328.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:36:59 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (5.4ms)
+Completed 200 OK in 384ms (Views: 381.5ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2017-10-24 00:37:17 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xuwyrht2OFJqgRRP5JnEr9jznhpfN7QHn/YCaCbBX6TPz2pBi5sU0NO2ydp8n2pMNvcs2Q2u9NvOh2BmUbY2JA=="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "remember_digest" = $1 WHERE "users"."id" = $2  [["remember_digest", nil], ["id", 1]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:37:17 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (2.9ms)
+Completed 200 OK in 270ms (Views: 268.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2017-10-24 00:37:19 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (2.8ms)
+Completed 200 OK in 301ms (Views: 300.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2017-10-24 00:37:21 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendered password_resets/new.html.erb within layouts/application (1.2ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  [1m[36mAuction Load (0.3ms)[0m  [1mSELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 261ms (Views: 259.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset" for ::1 at 2017-10-24 00:37:37 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/password_reset"}
+  [1m[35mUser Load (3.9ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_html_erb__2329686848479927629_70121276139880 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.html.erb:5)
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.5ms)
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_text_erb__1599871717107350769_70121281245320 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.text.erb:3)
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.6ms)
+
+UserMailer#password_reset: processed outbound mail in 38.0ms
+  Rendered /Users/taradevries/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/mailers/email.html.erb (12.1ms)
+Completed 200 OK in 91ms (Views: 20.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset?part=text%2Fhtml" for ::1 at 2017-10-24 00:37:38 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_html_erb__2329686848479927629_70121276139880 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.html.erb:5)
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.4ms)
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_text_erb__1599871717107350769_70121281245320 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.text.erb:3)
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (2.6ms)
+
+UserMailer#password_reset: processed outbound mail in 62.5ms
+  Rendered text template (0.0ms)
+Completed 200 OK in 95ms (Views: 6.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/password_resets/CWeSwhtiu1IAqRdnXlc9NQ/edit?email=tmdevries%40me.com" for ::1 at 2017-10-24 00:37:41 -0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"tmdevries@me.com", "id"=>"CWeSwhtiu1IAqRdnXlc9NQ"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "tmdevries@me.com"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :valid_user rendered or redirected
+Completed 302 Found in 88ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:37:41 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.2ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.5ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (4.0ms)
+Completed 200 OK in 277ms (Views: 275.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset?part=text%2Fplain" for ::1 at 2017-10-24 00:37:53 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/plain", "path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_html_erb__2329686848479927629_70121276139880 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.html.erb:5)
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.9ms)
+DEPRECATION WARNING: The method `edit_password_reset_path` cannot be used here as a full URL is required. Use `edit_password_reset_url` instead. (called from _app_views_user_mailer_password_reset_text_erb__1599871717107350769_70121281245320 at /Users/taradevries/Documents/GitHub Repositories/BCAFundraiser/app/views/user_mailer/password_reset.text.erb:3)
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (1.2ms)
+
+UserMailer#password_reset: processed outbound mail in 34.4ms
+  Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 0.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/password_resets/flR1nYuktG5XphKnaw7QEg/edit?email=tmdevries%40me.com" for ::1 at 2017-10-24 00:38:05 -0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"tmdevries@me.com", "id"=>"flR1nYuktG5XphKnaw7QEg"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "tmdevries@me.com"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :valid_user rendered or redirected
+Completed 302 Found in 86ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-10-24 00:38:05 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "auctions" WHERE "auctions"."active" = $1[0m  [["active", "t"]]
+  [1m[35mAuction Load (0.3ms)[0m  SELECT "auctions".* FROM "auctions" WHERE "auctions"."active" = $1  [["active", "t"]]
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 286ms (Views: 284.0ms | ActiveRecord: 0.7ms)

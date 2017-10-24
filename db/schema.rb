@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021155117) do
+ActiveRecord::Schema.define(version: 20171024061915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,17 +53,19 @@ ActiveRecord::Schema.define(version: 20151021155117) do
   add_index "items", ["auction_id"], name: "index_items_on_auction_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string  "email"
-    t.string  "password_digest"
-    t.string  "first_name"
-    t.string  "last_name"
-    t.string  "phone_number"
-    t.boolean "name_visible"
-    t.boolean "notify_by_text"
-    t.boolean "notify_by_email"
-    t.boolean "admin"
-    t.string  "auth_token"
-    t.string  "remember_digest"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_number"
+    t.boolean  "name_visible"
+    t.boolean  "notify_by_text"
+    t.boolean  "notify_by_email"
+    t.boolean  "admin"
+    t.string   "auth_token"
+    t.string   "remember_digest"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
   add_foreign_key "bids", "items"
